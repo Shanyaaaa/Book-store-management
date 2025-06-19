@@ -3,7 +3,7 @@ import { book } from '../models/bookModel.js';
 
 const router = express.Router();
 
-// ✅ CREATE a new book
+//  CREATE a new book
 router.post('/books', async (req, res) => {
   try {
     const { title, author, publishYear } = req.body;
@@ -20,7 +20,7 @@ router.post('/books', async (req, res) => {
   }
 });
 
-// ✅ READ all books
+//  READ all books
 router.get('/books', async (req, res) => {
   try {
     const books = await book.find({});
@@ -31,7 +31,7 @@ router.get('/books', async (req, res) => {
   }
 });
 
-// ✅ READ a book by ID
+//  READ a book by ID
 router.get('/books/:id', async (req, res) => {
   try {
     const id = req.params.id;
@@ -48,7 +48,7 @@ router.get('/books/:id', async (req, res) => {
   }
 });
 
-// ✅ UPDATE a book
+//  UPDATE a book
 router.put('/books/:id', async (req, res) => {
   try {
     const { title, author, publishYear } = req.body;
@@ -70,7 +70,7 @@ router.put('/books/:id', async (req, res) => {
   }
 });
 
-// ✅ DELETE a book
+//  DELETE a book
 router.delete('/books/:id', async (req, res) => {
   try {
     const id = req.params.id;
